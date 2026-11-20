@@ -40,8 +40,8 @@ def create_chunks(full_text,chunksize = 500,overlap = 100):
 def load_base(pdf_path = "01_College_Information.pdf"):
   full_text = load_pdf(pdf_path)
   chunks = create_chunks(full_text)
-  embed_model,index = build_vector(chunks)
-  return embed-model,chunks,index
+  index,embed_model,= build_vector(chunks)
+  return index,embed-model,chunks
 
 #retrieve
 def  retrieve_content(question,embed_model,chunks,index,num_chunks=3):
