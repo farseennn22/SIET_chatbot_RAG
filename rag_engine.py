@@ -26,7 +26,7 @@ def create_chunks(full_text,chunksize = 500,overlap = 100):
     return chunks
 
 #Embedding:
-def build_vectors (chunks,model_name = "all_MiniLM-L6-v2):
+def build_vectors (chunks,model_name = "all_MiniLM-L6-v2"):
     if not chunks:
       raise ValueError("cannot apply embeding without chunks")
    embed_model = SentenceTransformer(model_name)
